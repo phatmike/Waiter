@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jayempeesee.waiterapp">
+    package="com.example.jayempeesee.waiterapp" >
 
     <application
         android:allowBackup="true"
@@ -8,16 +8,17 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".WaiterList">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".WaiterList" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".waiter_list2" />
-        <activity android:name=".search_waiter"></activity>
+        <activity android:name=".search_waiter" />
+        <activity android:name=".MainActivity" >
+        </activity>
     </application>
 
 </manifest>

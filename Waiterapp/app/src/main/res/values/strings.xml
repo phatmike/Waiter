@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Waiter app</string>
-    <string name="Where">Where do you want to go?</string>
+    <string name="Where">Search Specific Location?</string>
     <string name="Do">Want Food Now!</string>
     <string name="editText">YAYAYAYAYAYAYAYAYAYAYAYAYAAY!!!!</string>
     <string name="search">Search</string>
