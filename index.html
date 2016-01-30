@@ -12,16 +12,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript">
+
+
   $(document).ready(function(){
-  	$.ajax({
-         url: "https://t1f3ktfmy8.execute-api.us-west-2.amazonaws.com/prod/getMockLocations",
-         //data: { x-api-key: adpDuKRF9p9XXkqegO02Z5qRoKSTTUJY134yueDK },
-         type: "GET",
-         beforeSend: function(xhr){xhr.setRequestHeader('x-api-key', 'adpDuKRF9p9XXkqegO02Z5qRoKSTTUJY134yueDK');},
-         success: function() { alert('Success!'); },
-         crossDomain: true
-      });
-  })
+  	$.get("https://t1f3ktfmy8.execute-api.us-west-2.amazonaws.com/prod/getmocklocation", function(data){
+
+  		var jsonObj = JSON.parse(data);
+  		$.each(jsonObj, function(index, value){
+  			var row = "<tr><td> " + value.locName + "</td><td> " + value.numVisitors + "</td><td>" + value.estTime + "</td></tr>";
+  		$("#locations").append(row);
+  		});
+  	});
+  });
   </script>
 	<style>
 	body{
@@ -31,76 +33,27 @@
 		overflow: auto;
 	}
 
-	/*
-		This is how to make a CSS comment
-	*/
-
-	/*This is header information from the youtube video. That I currently do not have. 
-	
-	h1, h2, h3 {
-		text-align: center;
-		padding-left: 5%;
-		color: #878E63;
-	} 
-
-	*/
-
 	</style>
 
-	<!-- This is how to make an HTML comment -->
 </head>
 
 <body>
+	<p id= "test"></p>
 
-	<!-- This is links for different web pages. 
-	<div id="wrapper">
-		<div id="callout">
-			<p>Call us at <b>215-555-555</b></p>
-		</div>
-		<header>
-			<a href="#"><img src= "http://www.mtsu.edu/debate/images/MTSU.gif" alt="Test"/> </a>
+	<div class="container">
 
-		</header>
-		<nav>
-			<ul>
-			
-
-				<li class='active'><a href ="#">Home</a></li>
-				<li><a href="#">Map</a></li>
-				<li><a href="#">Links</a></li>
-				<li><a href="#">Creators</a></li>
-
-			-->
-			<div class="container">
   <h2>Locations</h2>
   <p>Current number of people in line.</p> 
            
-  <table class="table table-hover">
+  <table id="locations" class="table table-hover">
     <thead>
       <tr>
         <th>Location</th>
         <th># of people in line</th>
-<th> Estimated wait time </th>
+		<th> Estimated wait time </th>
 
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>Peck Hall POD</td>
-        <td>10</td>
-<td>2 Mins</td>
-      </tr>
-      <tr>
-        <td>Chik fila</td>
-        <td>5</td>
-<td>2 Mins</td>
-      </tr>
-      <tr>
-        <td>Subway</td>
-        <td>0</td>
-<td>2 Mins</td>
-      </tr>
-    </tbody>
   </table>
 </div>
 
@@ -108,13 +61,8 @@
 			</ul>
 
 			<section class="left-col">
-				<p style="text-indent: 50px;">Our goal is to give you information on the Peck Hall POD location. So we can give you information to see if you have time to go to the POD.</p>
-				<p></p>
 
 			</section>
-
-
-
 		</nav>
 
 
