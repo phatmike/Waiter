@@ -1,1 +1,1 @@
-This is the folder for the android Waiter app.
+Ths s the folder for the androd Waiter app.
