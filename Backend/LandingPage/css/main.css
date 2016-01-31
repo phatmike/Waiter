@@ -1,0 +1,23 @@
+body {
+    background: #EEEEEE;
+    font-family :Verdon, Tahoma, Arial, sans-serif;
+    font-size: 18px;
+    overflow: auto;
+}
+
+.jumbotron {
+    width: 95vw;
+    margin-left: 2.5%;
+}
+
+#map {
+    display: none;
+    width: 95vw;
+    height: 100vh;
+    margin-left: 2.5%;
+}
+
+#table {
+    width: 95%;
+    margin-left: 2.5%;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jQuery/jquery-2.1.4.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Waiter App</title>
+</head>
+
+<body>
+    <div id="header" class="jumbotron">
+        <div class="container text-center">
+            <h1>Waiter</h1>
+            <a href="#" id="tableView">Table</a>
+            |
+            <a href="#" id="mapView">Map</a>
+        </div>
+    </div>
+
+    <div class="container" id="table">
+        <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th># of people in line</th>
+                <th> Estimated wait time </th>
+            </tr>
+        </thead>
+   	    <tbody id="locations">
+    	</tbody>
+        </table>
+    </div>
+
+    <div id="map"></div>
+    <script src="js/initMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+            async defer></script>
+    <script src="js/dataRefresh.js"></script>
+    <script src="js/pageToggle.js"></script>
+</body>
+</html>
